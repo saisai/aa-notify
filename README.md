@@ -1,4 +1,4 @@
-aw-notify
+aa-notify
 =========
 
 A notification service for ActivityWatch.
@@ -20,8 +20,8 @@ Install it using `poetry` with `poetry install`.
 ## Usage
 
 ```
-$ aw-notify --help
-Usage: aw-notify [OPTIONS] COMMAND [ARGS]...
+$ aa-notify --help
+Usage: aa-notify [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.

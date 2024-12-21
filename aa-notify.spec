@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['aw_notify/main.py'],
+a = Analysis(['aa_notify/main.py'],
              pathex=[],
              binaries=None,
              datas=None,
@@ -31,4 +31,4 @@ coll = COLLECT(exe,
                a.datas,
                strip=False,
                upx=True,
-               name='aw-notify')
+               name='aa-notify')

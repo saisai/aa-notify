@@ -4,11 +4,11 @@ build:
 	poetry install
 
 test:
-	poetry run aw-notify --help  # Ensures that it at least starts
+	poetry run aa-notify --help  # Ensures that it at least starts
 	make typecheck
 
 typecheck:
-	poetry run mypy aw_notify --ignore-missing-imports
+	poetry run mypy aa_notify --ignore-missing-imports
 
 PYFILES=$(shell find . -type f -name '*.py')
 
@@ -16,8 +16,8 @@ format:
 	black ${PYFILES}
 
 package:
-	pyinstaller aw-notify.spec --clean --noconfirm
+	pyinstaller aa-notify.spec --clean --noconfirm
 
 clean:
 	rm -rf build dist
-	rm -rf aw_notify/__pycache__
+	rm -rf aa_notify/__pycache__

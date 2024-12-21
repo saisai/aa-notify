@@ -31,18 +31,18 @@ tests = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pympler", "pytest (>=4
 tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
-name = "aw-client"
+name = "aa-client"
 version = "0.5.14"
 description = "Client library for ActivityWatch"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "aw_client-0.5.14-py3-none-any.whl", hash = "sha256:18a72a4c6a662f01028f97aa50bd1eb8d00d7b531a544e9c25fc1bc86380bfa9"},
-    {file = "aw_client-0.5.14.tar.gz", hash = "sha256:94cf9614029ee416c44590126f2975512d7b37869bf8b8de62c5e03d68996859"},
+    {file = "aa_client-0.5.14-py3-none-any.whl", hash = "sha256:18a72a4c6a662f01028f97aa50bd1eb8d00d7b531a544e9c25fc1bc86380bfa9"},
+    {file = "aa_client-0.5.14.tar.gz", hash = "sha256:94cf9614029ee416c44590126f2975512d7b37869bf8b8de62c5e03d68996859"},
 ]
 
 [package.dependencies]
-aw-core = ">=0.5.16,<0.6.0"
+aa-core = ">=0.5.16,<0.6.0"
 click = ">=8.0,<9.0"
 persist-queue = "*"
 requests = "*"
@@ -50,14 +50,14 @@ tabulate = "*"
 typing-extensions = "*"
 
 [[package]]
-name = "aw-core"
+name = "aa-core"
 version = "0.5.17"
 description = "Core library for ActivityWatch"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "aw_core-0.5.17-py3-none-any.whl", hash = "sha256:8c3dae7fddd23984f7711e4ff7933ba45ce25e5e416fdde4a9f1677e95c64feb"},
-    {file = "aw_core-0.5.17.tar.gz", hash = "sha256:f8ac5418d6a1de2b868bc75447d4d495aebc577a77eea56ba11dc2bde3771e27"},
+    {file = "aa_core-0.5.17-py3-none-any.whl", hash = "sha256:8c3dae7fddd23984f7711e4ff7933ba45ce25e5e416fdde4a9f1677e95c64feb"},
+    {file = "aa_core-0.5.17.tar.gz", hash = "sha256:f8ac5418d6a1de2b868bc75447d4d495aebc577a77eea56ba11dc2bde3771e27"},
 ]
 
 [package.dependencies]

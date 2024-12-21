@@ -1,20 +1,20 @@
 [tool.poetry]
-name = "aw-notify"
+name = "aa-notify"
 version = "0.1.0"
 description = "Screentime notifications using ActivityWatch"
 authors = ["Erik Bjäreholt <erik@bjareho.lt>"]
 license = "MPL-2.0"
 readme = "README.md"
 homepage = "https://activitywatch.net/"
-repository = "https://github.com/ActivityWatch/aw-notify/"
-packages = [{include = "aw_notify"}]
+repository = "https://github.com/ActivityWatch/aa-notify/"
+packages = [{include = "aa_notify"}]
 
 [tool.poetry.scripts]
-aw-notify = "aw_notify.main:main"
+aa-notify = "aa_notify.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-aw-client = "^0.5.14"
+aa-client = "^0.5.14"
 desktop-notifier = "^3.4.2"
 rubicon-objc = { version = "^0.4.0", platform = "darwin" }
 

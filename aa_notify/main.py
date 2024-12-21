@@ -18,16 +18,16 @@ from typing import (
     Union,
 )
 
-import aw_client.queries
+import aa_client.queries
 import click
-from aw_core.log import setup_logging
+from aa_core.log import setup_logging
 from desktop_notifier import DesktopNotifier
 from typing_extensions import TypeAlias
 
 logger = logging.getLogger(__name__)
 
 # Types
-AwClient = aw_client.ActivityWatchClient
+AwClient = aa_client.ActivityWatchClient
 CacheKey: TypeAlias = tuple
 
 # Constants
@@ -98,10 +98,10 @@ def get_time(date=None, top_level_only=True) -> dict[str, timedelta]:
     ]
 
     hostname = aw.get_info().get("hostname", "unknown")
-    canonicalQuery = aw_client.queries.canonicalEvents(
-        aw_client.queries.DesktopQueryParams(
-            bid_window=f"aw-watcher-window_{hostname}",
-            bid_afk=f"aw-watcher-afk_{hostname}",
+    canonicalQuery = aa_client.queries.canonicalEvents(
+        aa_client.queries.DesktopQueryParams(
+            bid_window=f"aa-watcher-window_{hostname}",
+            bid_afk=f"aa-watcher-afk_{hostname}",
         )
     )
     query = f"""
@@ -263,7 +263,7 @@ def init_macos():
 @click.option("-v", "--verbose", is_flag=True, help="Verbose logging.")
 @click.option("--testing", is_flag=True, help="Enables testing mode.")
 def main(ctx, verbose: bool, testing: bool):
-    setup_logging("aw-notify", testing=testing, verbose=verbose, log_file=True)
+    setup_logging("aa-notify", testing=testing, verbose=verbose, log_file=True)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logger.info("Starting...")
 
@@ -279,7 +279,7 @@ def main(ctx, verbose: bool, testing: bool):
 def start(testing=False):
     """Start the notification service."""
     global aw
-    aw = aw_client.ActivityWatchClient("aw-notify", testing=testing)
+    aw = aa_client.ActivityWatchClient("aa-notify", testing=testing)
     aw.wait_for_start()
 
     send_checkin()
@@ -326,7 +326,7 @@ def threshold_alerts():
 def checkin(testing=False):
     """Send a summary notification."""
     global aw
-    aw = aw_client.ActivityWatchClient("aw-notify-checkin", testing=testing)
+    aw = aa_client.ActivityWatchClient("aw-notify-checkin", testing=testing)
 
     send_checkin()
 
