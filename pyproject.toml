@@ -14,7 +14,6 @@ aa-notify = "aa_notify.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-aa-client = "^0.5.14"
 desktop-notifier = "^3.4.2"
 rubicon-objc = { version = "^0.4.0", platform = "darwin" }
 
